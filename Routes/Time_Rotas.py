@@ -1,10 +1,6 @@
-from flask_openapi3 import OpenAPI, Info, Tag
-from flask_cors import CORS
-from Model import Session
-
-info = Info(title="Bjj API", version="1.0.0")
-app = OpenAPI(__name__, info=info)
-CORS(app)
+from app import app
+from flask_openapi3 import Tag
+from Schemas import *
 
 time_tag = Tag(name="Time", description="Adição, edição, visualização e remoção de um novo time")
 
@@ -12,5 +8,20 @@ time_tag = Tag(name="Time", description="Adição, edição, visualização e re
 def get_times():
     """Buscar equipes de jiujitsu
     """
-
     session = Session()
+
+@app.get('/time', tags=[time_tag])
+def get_time(query: TimeBuscaSchema):
+    pass
+
+@app.post('/time', tags[time_tag])
+def add_time(form: TimeSchema):
+    pass
+
+@app.put('/time', tags[time_tag])
+def update_time(form: TimeUpdateSchema):
+    pass
+
+@app.delete('/time', tags=[time_tag])
+def delete_time(query: TimeBuscaSchema):
+    pass
