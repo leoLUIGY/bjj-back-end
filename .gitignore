@@ -1,0 +1,34 @@
+
+---
+
+# 🚫 .gitignore (ESSENCIAL)
+
+```gitignore
+# Virtual environment
+venv/
+env/
+.venv/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Environment variables
+.env
+
+# Database (SQLite)
+*.sqlite3
+*.db
+
+# IDEs
+.vscode/
+.idea/
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
