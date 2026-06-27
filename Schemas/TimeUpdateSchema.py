@@ -7,5 +7,5 @@ class TimeUpdateSchema(BaseModel):
     pais: str
     data_fundacao: str
     nome_fundador: str
-    descricao: str
-    logo_url: str
+    descricao: str 
+    logo_url: str | None = None

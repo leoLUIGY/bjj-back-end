@@ -6,4 +6,4 @@ class TimeSchema(BaseModel):
     data_fundacao: str
     nome_fundador: str
     descricao: str
-    logo_url: str
+    logo_url: str | None = None

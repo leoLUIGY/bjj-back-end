@@ -5,6 +5,7 @@ from Schemas.TimeBuscaSchema import TimeBuscaSchema
 from Schemas.TimeSchema import TimeSchema
 from Schemas.TimeUpdateSchema import TimeUpdateSchema
 from Model import *
+from flask import redirect
 
 home_tag = Tag(name="Documentação", description="Seleção de documentação: Swagger, Redoc ou RapiDoc")
 time_tag = Tag(name="Time", description="Adição, edição, visualização e remoção de um novo time")
@@ -50,6 +51,7 @@ def get_time(query: TimeBuscaSchema):
 def add_time(form: TimeSchema):
     """ Adicionar um novo time
     """
+    
     time = Time(
         nome = form.nome,
         pais = form.pais,
